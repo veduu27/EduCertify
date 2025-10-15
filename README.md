@@ -31,7 +31,7 @@ To run this project locally, follow these steps.
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/UNKNOWN69x0/EduCertify.git
+    git clone https://github.com/veduu27/EduCertify.git
     ```
 
 2.  **Deploy the Smart Contract:**
