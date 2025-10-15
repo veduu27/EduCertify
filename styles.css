@@ -1,0 +1,266 @@
+/* Base Styles */
+:root {
+    --primary: #4361ee;
+    --primary-dark: #3a56d5;
+    --secondary: #3f37c9;
+    --success: #4cc9f0;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --gray: #adb5bd;
+    --white: #ffffff;
+
+    --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--light);
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 30px 0;
+}
+
+.header h1 {
+    font-size: 2.8rem;
+    color: var(--white);
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header h1 i {
+    margin-right: 15px;
+    color: var(--success);
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: var(--gray);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Styles - The Glass Effect */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px); /* For Safari */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.45);
+}
+
+.card-header {
+    background: transparent;
+    color: var(--white);
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-header i {
+    font-size: 1.8rem;
+    margin-right: 15px;
+    color: var(--success);
+}
+
+.card-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--light);
+}
+
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 14px 18px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-size: 1rem;
+    color: var(--light);
+    transition: var(--transition);
+}
+
+.form-group input[type="text"]::placeholder {
+    color: var(--gray);
+}
+
+.form-group input[type="text"]:focus {
+    border-color: var(--success);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(76, 201, 240, 0.3);
+}
+
+/* File Input Styles */
+.file-input {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.file-input input[type="file"] {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.file-custom {
+    display: block;
+    padding: 14px 18px;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    text-align: center;
+    color: var(--gray);
+    transition: var(--transition);
+}
+
+.file-custom:hover {
+    border-color: var(--success);
+    color: var(--success);
+    background: rgba(76, 201, 240, 0.1);
+}
+
+.file-custom i {
+    margin-right: 8px;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(67, 97, 238, 0.4);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(67, 97, 238, 0.5);
+}
+
+.btn-secondary {
+    background: var(--secondary);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(63, 55, 201, 0.4);
+}
+
+.btn-secondary:hover {
+    background: #342ead;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(63, 55, 201, 0.5);
+}
+
+/* Hash Display */
+.hash-display {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    word-break: break-all;
+    color: var(--success);
+    font-size: 1rem;
+    border: 1px solid rgba(76, 201, 240, 0.2);
+}
+
+/* Status Container */
+.status-container {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .header h1 {
+      font-size: 2.2rem;
+    }
+}
